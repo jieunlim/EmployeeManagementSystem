@@ -1,0 +1,62 @@
+drop table Employee;
+create table Employee(
+Employee_ID number,
+Login_ID varchar2(15),
+Department_ID number,
+Manager_ID number,
+Title varchar(50),
+BirthDate date,
+MaritalStatus nchar(1),
+HireDate date,
+VacationHours smallint,
+SickLeaveHours smallint,
+Modified_Date date,
+Gender varchar2(8)
+);
+	
+
+set linesize 200 pagesize 50;
+col Employee_ID for 9999;
+col Login_ID for a10;
+col Department_ID for 99999;
+col Manager_ID for 99999;
+col Title for a10;
+col BirthDate for 9999;
+col MaritalStatus for 9999;
+col HireDate for 9999;
+col VacationHours for 9999;
+col SickLeaveHours for 9999;
+col Modified_Date for 9999;
+col Gender for a6;
+
+
+
+insert into Employee values(0101,'James',10001,0000,'Intern', to_date('19950202','YYYYMMDD'), 'S',to_date('20170504','YYYYMMDD'),10,0,null,'M');
+insert into Employee values(0101,'Filly',10001,0000,'Intern', to_date('19950202','YYYYMMDD'), 'S',to_date('20170504','YYYYMMDD'),10,0,0,'M');
+insert into Employee values(0101,'Fai',10001,0000,'Intern', to_date('19940809','YYYYMMDD'), 'S',to_date('20170504','YYYYMMDD'),10,0,0,'M');
+insert into Employee values(0101,'Joohee',10001,0000,'Intern', to_date('19960409','YYYYMMDD'), 'S',to_date('20170504','YYYYMMDD'),10,0,0,'F');
+insert into Employee values(0101,'John',10001,NULL,'Intern', to_date('19900602','YYYYMMDD'), 'S',to_date('20170504','YYYYMMDD'),10,0,0,'M');
+insert into Employee values(0101,'Ruth',10001,0000,'Intern', to_date('19890205','YYYYMMDD'), 'S',to_date('20170504','YYYYMMDD'),10,0,0,'F');
+
+drop table Department;
+create table Department(
+Department_ID number,
+Name varchar2(50),
+Group_Name varchar2(50),
+Modified_Date date
+);
+
+col Department_ID for 9999;
+col Name for a10;
+col Group_Name for a10;
+col Modified_Date for a10;
+
+insert into Department values(1,'IT','Team1',to_date('20170205','YYYYMMDD'));
+insert into Department values(2,'IT','Team2',to_date('20170320','YYYYMMDD'));
+insert into Department values(3,'Finance','Team1',to_date('20170301','YYYYMMDD'));
+insert into Department values(4,'HR','Team1',to_date('20170405','YYYYMMDD'));
+
+
+commit;
+select * from Employee;
+
