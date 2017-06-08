@@ -4,7 +4,7 @@
 
 ##Background
 
-    Manage employee information. Add, update, delete function.
+    Manage employees' information with add, update, delete function.
 
 ##Objective
     Practice JAVA
